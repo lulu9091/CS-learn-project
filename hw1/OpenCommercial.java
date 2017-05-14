@@ -18,21 +18,26 @@ class OpenCommercial {
    */
   public static void main(String[] arg) throws Exception {
 
-   /* BufferedReader keyboard;*/
-   /* String inputLine;*/
+    BufferedReader keyboard;
+    String inputLine;
 
-   /* keyboard = new BufferedReader(new InputStreamReader(System.in));*/
+    keyboard = new BufferedReader(new InputStreamReader(System.in));
 
-   /* System.out.print("Please enter the name of a company (without spaces): ");*/
-   /* System.out.flush(); */       /* Make sure the line is printed immediately. */
-   /* inputLine = keyboard.readLine();*/
+    System.out.print("Please enter the name of a company (without spaces): ");
+    System.out.flush();        /* Make sure the line is printed immediately. */
+    inputLine = keyboard.readLine();
      
     /* Replace this comment with your solution.  */
-     URL url= new URL("https://www.bilibili.com");
-    /* InputStream ins = url.openStream();*/
-    /* InputStreamReader isr= new InputStreamReader(ins);*/
-    /* BufferedReader website= new BufferedReader(isr);*/
-     BufferedReader website= new BufferedReader(new InputStreamReader(url.openStream()));
-     System.out.println(website.readLine());
-  }
+     URL url= new URL("https://www."+inputLine+".com");
+     InputStream ins = url.openStream();
+     InputStreamReader isr = new InputStreamReader(ins);
+     BufferedReader website =new BufferedReader(isr);
+     String Lines[]= new String[5]; 
+     for (int i=0;i<5;i++) {
+       Lines[i]=website.readLine();
+      }
+     for (int i=4;i>=0;i--){
+       System.out.println(Lines[i]);
+     }
+    }
 }
