@@ -1,0 +1,15 @@
+For the Hw1
+1,readLine() will read the content line by line and the carriage will move to the next line automatilly.
+So if you want to read two lines, the only thing you need to do is repeat this code twice
+2, know how to define the string array. 
+String Lines[]= new String[5];
+Lines[i]=website.readLine();
+or
+
+String Lines[]; define the type string array;
+Lines= new String[5];  open  a area for String
+
+
+
+For the Hw2
+an idea of replace a chariteristier in the middle of the string just combine the one before it and the one after it with code substring.;
